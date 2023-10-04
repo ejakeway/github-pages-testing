@@ -1,0 +1,89 @@
+:root {
+    --text-base-color: #1b1b1b;
+    --text-primary-color: #005ea2;
+    --text-primary-dark-color: #1a4480;
+    --bg-base-lighter: #dfe1e2;
+    --bg-base-lightest: #f0f0f0;
+    --bg-base-lighter: #dfe1e2;
+    --bg-base-light: #a9aeb1;
+    --bg-base: #71767a;
+    --bg-base-dark: #565c65;
+    --bg-base-darker: #3d4551;
+    --bg-base-darkest: #1b1b1b;
+}
+
+body {
+    color: var(--text-base-color);
+    background-color: white;
+    overflow-x: hidden;
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+a,
+a:visited {
+    color: var(--text-primary-color);
+}
+a:hover {
+    color: var(--text-primary-dark-color);
+}
+
+p, li {
+    line-height: 1.4;
+}
+
+main {
+    box-sizing: border-box;
+    padding: 1rem;
+    flex-grow: 1;
+}
+
+.loc-header {
+    position: sticky;
+    top: 0;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 6px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: var(--bg-base-lighter);
+    border-bottom: 1px solid var(--bg-base-light);
+}
+@media screen and ((max-height: 520px) or (max-width: 600px)) {
+    .loc-header {
+        position: relative;
+    }
+}
+.loc-header .loc-logo img {
+    height: 30px;
+    width: auto;
+    margin-right: 6px;
+}
+.loc-header .project-description {
+    text-align: center;
+}
+.loc-header .project-description p {
+    margin: 0;
+    font-size: 0.9rem;
+}
+
+.loc-footer {
+    background: var(--bg-base-lightest);
+    border-top: 1px solid var(--bg-base-light);
+    padding: 0 12px 12px;
+    text-align: center;
+    font-size: 0.9rem;
+}
+.loc-footer .loc-footer-nav-list {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    list-style: none;
+}
+.loc-footer .loc-footer-nav-list li {
+    margin: 0 6px;
+}
